@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Anita Jalili-Kalhori</title>
+</head>
+<body>
+
+    <script>
+        var myheading = "This is My Web Page with JavaScript! :)";
+        var linktag = '<a href="https://www.smc.edu/academics/academic-departments/csis/">CSIS Website</a>';
+        var introtext = "See below for EVEN number of stars.";
+        var begineffect = '<strong>';
+        var endeffect = '</strong>';
+        var beginpara = '<p>';
+        var endpara = '</p>';
+
+        document.write(beginpara + begineffect + myheading + endeffect + endpara);
+        document.write(beginpara + begineffect + linktag + endeffect + endpara);
+        document.write(beginpara + begineffect + introtext + endeffect + endpara);
+
+        var userInput = prompt("Enter a number between 2 and 30:");
+
+        if (userInput >= 2 && userInput <= 30) {
+            //rows
+            for (var i = 2; i <= userInput; i += 2) {
+                //stars
+                for (var j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+            document.write(beginpara + begineffect + "Good Job!" + endeffect + endpara);
+        } else {
+            document.write(beginpara + begineffect + "Invalid input. Please enter a number between 2 and 30." + endeffect + endpara);
+        }
+    </script>
+
+</body>
+</html>
